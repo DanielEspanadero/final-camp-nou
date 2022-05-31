@@ -1,0 +1,36 @@
+{
+  "name": "hackathon-final-jobarcelona-team-adidas-back",
+  "version": "1.0.0",
+  "description": "Project made for the final of the JOBarcelona '22 hackathon by adidas backend team.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index --exec babel-node",
+    "start": "babel-node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielEspanadero/hackathon-final-camp-nou.git"
+  },
+  "keywords": [],
+  "author": "Daniel Españadero, Sergio Bermudez, Ibai Alberdi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielEspanadero/hackathon-final-camp-nou/issues"
+  },
+  "homepage": "https://github.com/DanielEspanadero/hackathon-final-camp-nou#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.4"
+  }
+}
