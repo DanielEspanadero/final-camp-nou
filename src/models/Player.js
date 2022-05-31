@@ -112,14 +112,14 @@ const PlayerSchema = new Schema({
   },
 });
 
-PlayerSchema.pre("update", function () {
-  const fairPrice = calculatePrice(this);
-  this.update({}, { $set: { fairPrice } });
-});
+// PlayerSchema.pre("update", function () {
+//   const fairPrice = calculatePrice(this);
+//   this.update({}, { $set: { fairPrice } });
+// });
 
-PlayerSchema.pre("save", function () {
-  const fairPrice = calculatePrice(this);
-  this.update({}, { $set: { fairPrice } });
-});
+// PlayerSchema.pre("save", function () {
+//   const fairPrice = calculatePrice(this);
+//   this.update({}, { $set: { fairPrice } });
+// });
 
 export const Player = model("Player", PlayerSchema);
