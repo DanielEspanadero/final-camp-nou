@@ -109,16 +109,24 @@ const PlayerSchema = new Schema({
   fairPrice: {
     type: Number,
     default: 0,
+    required: true,
   },
 });
 
-// PlayerSchema.pre("update", function () {
-//   const fairPrice = calculatePrice(this);
+// PlayerSchema.pre("update", function (next, docs) {
+//   const fairPrice = calculatePrice(docs.toObject({ getters: true }));
 //   this.update({}, { $set: { fairPrice } });
 // });
 
-// PlayerSchema.pre("save", function () {
-//   const fairPrice = calculatePrice(this);
+// PlayerSchema.pre("insertMany", function () {
+//   console.log(JSON.parse(JSON.stringify(this)));
+//   const fairPrice = calculatePrice(this._doc);
+//   console.log(this.lean());
+//   this.update({}, { $set: { fairPrice } });
+// });
+
+// PlayerSchema.pre("save", function (next, docs) {
+//   const fairPrice = calculatePrice(docs.toObject({ getters: true }));
 //   this.update({}, { $set: { fairPrice } });
 // });
 
