@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { calculatePrice } from "../utils/calculatePrice";
+// import { calculatePrice } from "../utils/calculatePrice";
 
 const PlayerSchema = new Schema({
   red_card_continent: {
@@ -119,14 +119,13 @@ const PlayerSchema = new Schema({
 // });
 
 // PlayerSchema.pre("insertMany", function () {
-//   console.log(JSON.parse(JSON.stringify(this)));
+//   console.log(this._id);
 //   const fairPrice = calculatePrice(this._doc);
-//   console.log(this.lean());
 //   this.update({}, { $set: { fairPrice } });
 // });
 
-// PlayerSchema.pre("save", function (next, docs) {
-//   const fairPrice = calculatePrice(docs.toObject({ getters: true }));
+// PlayerSchema.pre("save", function () {
+//   const fairPrice = calculatePrice(this);
 //   this.update({}, { $set: { fairPrice } });
 // });
 

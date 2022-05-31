@@ -16,7 +16,7 @@ server.use("/api/v1/players", playerRouter);
 (async () => {
   try {
     await connectDB();
-    PlayerSeeder();
+    await PlayerSeeder();
     server.listen(process.env.PORT, () => {
       console.log(`Server listenner on port ${process.env.PORT}`);
     });

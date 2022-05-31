@@ -4,7 +4,7 @@ import PlayerJson from "../db/train.json";
 export const PlayerSeeder = async () => {
   const count = await Player.estimatedDocumentCount();
 
-  if (count > 0) return;
+  if (count !== 0) return;
 
-  await Player.insertMany(PlayerJson);
+  Player.insertMany(PlayerJson);
 };
